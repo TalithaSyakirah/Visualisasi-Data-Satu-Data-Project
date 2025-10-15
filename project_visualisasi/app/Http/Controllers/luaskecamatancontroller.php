@@ -10,10 +10,10 @@ use Illuminate\View\View;
 class luaskecamatancontroller extends Controller
 {
     // Tampilkan semua data
-    public function index(): View{
-        $luaskecamatans = luaskecamatan::all();
-        return view('index', ['luaskecamatans'=>$luaskecamatans]);
-    }
+    // public function index(): View{
+    //     $luaskecamatans = luaskecamatan::all();
+    //     return view('index', ['luaskecamatans'=>$luaskecamatans]);
+    // }
 
     // Simpan data baru
     public function store(Request $request): RedirectResponse
@@ -28,14 +28,14 @@ class luaskecamatancontroller extends Controller
             'luaskm2' => $request->luaskm2,
         ]);
 
-        return redirect()->route('luaskecamatan.index');
+        return redirect()->route('dashboard.index');
     }
 
     // Hapus data
     public function destroy(luaskecamatan $luaskecamatan): RedirectResponse
     {
         $luaskecamatan->delete();
-        return redirect()->route('luaskecamatan.index');
+        return redirect()->route('dashboard.index');
     }
 
     // Tampilkan form edit/update
@@ -57,6 +57,6 @@ class luaskecamatancontroller extends Controller
             'luaskm2' => $request->luaskm2,
         ]);
 
-        return redirect()->route('luaskecamatan.index');
+        return redirect()->route('dashboard.index');
     }
 }

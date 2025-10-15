@@ -7,10 +7,15 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+use App\Http\Controllers\MainController;
+
+Route::get('/', [MainController::class, 'index'])->name('dashboard.index');
+
+
 //Luas Kecamatan
 
-// route utama: tampil data
-Route::get('/', [luaskecamatanController::class, 'index'])->name('luaskecamatan.index');
+// // route utama: tampil data
+// Route::get('/', [luaskecamatanController::class, 'index'])->name('luaskecamatan.index');
 
 // tambah data
 Route::post('/luaskecamatan', [luaskecamatanController::class, 'store'])->name('luaskecamatan.store');
@@ -26,19 +31,19 @@ Route::put('/luaskecamatan/{luaskecamatan}', [luaskecamatanController::class, 'u
 
 //Jumlah Penduduk 
 
-use App\Http\Controllers\JumlahPendudukController;
+use App\Http\Controllers\jumlahPendudukController;
 
-// Halaman utama & CRUD
-Route::get('/jumlahpenduduk', [JumlahPendudukController::class, 'index'])->name('jumlahpenduduk.index');
+// // Halaman utama & CRUD
+// Route::get('/', [jumlahPendudukController::class, 'index'])->name('jumlahpenduduk.index');
 
 //tambah data 
-Route::post('/jumlahpenduduk', [JumlahPendudukController::class, 'store'])->name('jumlahpenduduk.store');
+Route::post('/jumlahpenduduk', [jumlahPendudukController::class, 'store'])->name('jumlahpenduduk.store');
 
 //hapus data
-Route::delete('/jumlahpenduduk/{jumlahpenduduk}', [JumlahPendudukController::class, 'destroy'])->name('jumlahpenduduk.destroy');
+Route::delete('/jumlahpenduduk/{jumlahpenduduk}', [jumlahPendudukController::class, 'destroy'])->name('jumlahpenduduk.destroy');
 
 // form update
-Route::get('/jumlahpenduduk/{jumlahpenduduk}/edit', [JumlahPendudukController::class, 'viewUpdate'])->name('jumlahpenduduk.viewUpdate');
+Route::get('/jumlahpenduduk/{jumlahpenduduk}/viewUpdate', [jumlahPendudukController::class, 'viewUpdate'])->name('jumlahpenduduk.viewUpdate');
 
 // simpan update
-Route::put('/jumlahpenduduk/{jumlahpenduduk}', [JumlahPendudukController::class, 'update'])->name('jumlahpenduduk.update');
+Route::put('/jumlahpenduduk/{jumlahpenduduk}', [jumlahPendudukController::class, 'update'])->name('jumlahpenduduk.update');

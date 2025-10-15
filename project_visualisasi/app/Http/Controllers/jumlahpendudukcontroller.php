@@ -10,11 +10,11 @@ use Illuminate\View\View;
 class JumlahPendudukController extends Controller
 {
     // 🧾 Tampilkan semua data
-    public function index(): View
-    {
-        $jumlahpenduduks = jumlahpenduduk::all();
-        return view('jumlahpenduduk.index', ['jumlahpenduduks' => $jumlahpenduduks]);
-    }
+    // public function index(): View
+    // {
+    //     $jumlahpenduduks = jumlahpenduduk::all();
+    //     return view('index', ['jumlahpenduduks' => $jumlahpenduduks]);
+    // }
 
     // ➕ Simpan data baru
     public function store(Request $request): RedirectResponse
@@ -33,14 +33,14 @@ class JumlahPendudukController extends Controller
             'jumlah' => $request->jumlah,
         ]);
 
-        return redirect()->route('jumlahpenduduk.index')->with('success', 'Data berhasil ditambahkan.');
+        return redirect()->route('dashboard.index')->with('success', 'Data berhasil ditambahkan.');
     }
 
     // 🗑️ Hapus data
     public function destroy(jumlahpenduduk $jumlahpenduduk): RedirectResponse
     {
         $jumlahpenduduk->delete();
-        return redirect()->route('jumlahpenduduk.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('dashboard.index')->with('success', 'Data berhasil dihapus.');
     }
 
     // 🛠️ Tampilkan form edit/update
@@ -66,6 +66,6 @@ class JumlahPendudukController extends Controller
             'jumlah' => $request->jumlah,
         ]);
 
-        return redirect()->route('jumlahpenduduk.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('dashboard.index')->with('success', 'Data berhasil diperbarui.');
     }
 }

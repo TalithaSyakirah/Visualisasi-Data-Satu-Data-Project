@@ -38,7 +38,7 @@
 
                     <div class="d-flex">
                         <button type="submit" class="btn btn-primary me-2">Update Data</button>
-                        <a href="{{ route('luaskecamatan.index') }}" class="btn btn-secondary">Cancel</a>
+                        <a href="{{ route('dashboard.index') }}" class="btn btn-secondary">Cancel</a>
                     </div>
                 </form>
             </div>
