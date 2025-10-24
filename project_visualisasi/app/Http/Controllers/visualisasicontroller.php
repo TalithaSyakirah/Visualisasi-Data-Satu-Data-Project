@@ -14,7 +14,7 @@ use App\Models\pdrbhargaberlakukategori;
 use App\Models\pertumbuhannilaitambahkategori;
 use Illuminate\View\View;
 
-class MainController extends Controller
+class visualisasicontroller extends Controller
 {
     public function index(): View
     {

@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'bootstrap/scss/bootstrap';
+@import 'mdb-ui-kit/css/mdb.min.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

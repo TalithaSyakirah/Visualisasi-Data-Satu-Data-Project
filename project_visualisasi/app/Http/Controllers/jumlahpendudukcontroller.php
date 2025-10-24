@@ -7,7 +7,7 @@ use App\Models\jumlahpenduduk;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
-class JumlahPendudukController extends Controller
+class jumlahpendudukcontroller extends Controller
 {
     // 🧾 Tampilkan semua data
     // public function index(): View

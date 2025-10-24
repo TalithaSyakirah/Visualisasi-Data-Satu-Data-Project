@@ -986,7 +986,7 @@
             <th>Akomodasi & Makan Minum</th>
             <th>Informasi & Komunikasi</th>
             <th>Jasa Keuangan & Asuransi</th>
-            <th>Real Estate</th>
+            <th>Real Estat</th>
             <th>Jasa Perusahaan</th>
             <th>Administrasi & Jaminan Sosial</th>
             <th>Jasa Pendidikan</th>
@@ -1010,7 +1010,7 @@
               <td>{{ $data->konstruksi }}</td>
               <td>{{ $data->perdagangan_reparasi_motor }}</td>
               <td>{{ $data->transportasi_pergudangan }}</td>
-              <td>{{ $data->akomodasi_makan_minum }}</td> 
+              <td>{{ $data->akomodasi_makan_minum }}</td>
               <td>{{ $data->informasi_komunikasi }}</td>
               <td>{{ $data->jasa_keuangan_asuransi }}</td>
               <td>{{ $data->real_estat }}</td>
